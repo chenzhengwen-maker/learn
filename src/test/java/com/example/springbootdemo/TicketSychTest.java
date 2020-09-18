@@ -26,26 +26,20 @@ public class TicketSychTest {
 
         @Override
         public void run() {
-            try {
-                    while (count > 0) {
-                        synchronized (this) {
-                            if (count > 0) {
-                                System.out.println(Thread.currentThread().getName() + "出售" + (count--) + "票");
-                            }
-                        }
+            while (count > 0) {
+                synchronized (this) {
+                    if (count > 0) {
+                        System.out.println(Thread.currentThread().getName() + "出售" + (count--) + "票");
                     }
-            }catch (Exception e){
-
-            }finally {
-
+                }
             }
 
-            try {
+            /*try {
                 Thread.sleep(20);
             } catch (InterruptedException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
-            }
+            }*/
 
         }
     }
