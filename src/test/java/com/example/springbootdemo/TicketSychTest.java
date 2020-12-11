@@ -19,6 +19,13 @@ public class TicketSychTest {
         t2.start();
         t3.start();
         t4.start();
+        Thread t5 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("i am t5");
+            }
+        });
+        t5.start();
         Thread.currentThread().join();
     }
 
