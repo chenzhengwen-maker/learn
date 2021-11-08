@@ -26,7 +26,7 @@ public class StaticClassTest {
 
         System.out.println(result);
         try {
-            InetAddress[] inetadd = InetAddress.getAllByName("www.baidu.com");
+            InetAddress[] inetadd = InetAddress.getAllByName("baidu.com");
             for (int i = 0; i < inetadd.length; i++) {
                 System.out.println(inetadd[i]);
             }
